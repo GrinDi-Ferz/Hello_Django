@@ -21,7 +21,7 @@ class StockSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stock
-        fields = ['address', 'positions']
+        fields = ['id', 'address', 'positions']
 
 
     def create(self, validated_data):
@@ -33,7 +33,7 @@ class StockSerializer(serializers.ModelSerializer):
 
         for position in positions:
             position['stock'] = stock
-            StockProduct.jbjects.create(**position)
+            StockProduct.objects.create(**position)
 
         # здесь вам надо заполнить связанные таблицы
         # в нашем случае: таблицу StockProduct
