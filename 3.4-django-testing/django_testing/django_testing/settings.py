@@ -82,6 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'netology_django_testing',
         'HOST': '127.0.0.1',
+        'USER': 'postgres',
+        'PASSWORD': 'spryt0108',
         'PORT': '5432',
     }
 }
