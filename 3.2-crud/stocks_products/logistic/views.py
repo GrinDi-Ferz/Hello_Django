@@ -22,3 +22,7 @@ class StockViewSet(ModelViewSet):
     filterset_fields = ['products']
     search_fields = ['products']
     # при необходимости добавьте параметры фильтрации
+
+@api_view(['GET'])
+def samlpe_view(request):
+    return Response({'message': 'ПРИВЕТ ВСЕМ!!!!'})
