@@ -24,5 +24,5 @@ class StockViewSet(ModelViewSet):
     # при необходимости добавьте параметры фильтрации
 
 @api_view(['GET'])
-def samlpe_view(request):
+def sample_view(request):
     return Response({'message': 'ПРИВЕТ ВСЕМ!!!!'})

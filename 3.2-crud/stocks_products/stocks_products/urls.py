@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.http import HttpResponse
+from .views import samlpe_view  # импортируйте вашу функцию
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('logistic.urls')),
     path('', lambda request: HttpResponse("Главная страница")),
+    path('test/', sample_view, name='sample'),
+
 ]
