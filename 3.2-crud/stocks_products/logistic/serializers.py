@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Product, StockProduct, Stock
 
+
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
@@ -8,16 +9,15 @@ class ProductSerializer(serializers.ModelSerializer):
     # настройте сериализатор для продукта
 
 
-
 class ProductPositionSerializer(serializers.ModelSerializer):
     class Meta:
         model = StockProduct
-        fields = ['product', 'quantity','price'],
-
+        fields = ['product', 'quantity', 'price'],
 
 
 class StockSerializer(serializers.ModelSerializer):
     positions = ProductPositionSerializer(many=True)
+
 
     class Meta:
         model = Stock
