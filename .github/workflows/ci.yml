@@ -69,3 +69,10 @@ jobs:
           DB_HOST: ${{env.DB_HOST}}
           DB_PORT: ${{env.DB_PORT}}
 
+      - name: Деплой
+        uses: appleboy/ssh-action@video
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.SSH_USER}}
+          password: ${{secrets.SSH_PASSWORD}}
+          script: expect /home/gdyakov/Hello_Django/3.2-crud/stocks_products/deploy.exp
