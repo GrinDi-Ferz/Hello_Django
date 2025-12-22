@@ -6,6 +6,7 @@ from logistic.models import Product, Stock
 from logistic.serializers import ProductSerializer, StockSerializer
 from rest_framework.response import Response
 
+
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -22,6 +23,7 @@ class StockViewSet(ModelViewSet):
     filterset_fields = ['products']
     search_fields = ['products']
     # при необходимости добавьте параметры фильтрации
+
 
 @api_view(['GET'])
 def sample_view(request):
