@@ -44,6 +44,9 @@ jobs:
       - name: Установка зависимостей
         run: pip install -r 3.2-crud/stocks_products/requirements.txt
 
+      - name: Install flake8
+        run: pip install flake8
+
       - name: Линтинг
         run: flake8 logistic/ --exclude=logistic/migrations
 
