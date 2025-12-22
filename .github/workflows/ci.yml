@@ -53,6 +53,9 @@ jobs:
       - name: dotenv
         run: pip install python-dotenv
 
+      - name: ailter django
+        run: pip install django-filter
+
       - name: Тестирование
         run: python 3.2-crud/stocks_products/manage.py test
         env:
