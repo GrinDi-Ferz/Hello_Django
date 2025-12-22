@@ -48,7 +48,7 @@ jobs:
         run: pip install flake8
 
       - name: Линтинг
-        run: flake8 logistic/ --exclude=logistic/migrations
+        run: flake8 logistic/ --exclude=.2-crud/stocks_products/logistic/migrations
 
       - name: Тестирование
         run: python manage.py test
